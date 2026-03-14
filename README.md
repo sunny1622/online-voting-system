@@ -6,196 +6,198 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
-A robust, secure, and user-friendly online voting system designed for educational institutions and organizations. Built with Python and Tkinter, this application streamlines the process of conducting elections while maintaining transparency and security.
+A secure and user-friendly **Online Voting System** built using Python and Tkinter.
+This system allows administrators to manage elections and voters to cast votes securely.
 
 </div>
 
-## 📋 Table of Contents
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Login Credentials](#login-credentials)
-- [System Architecture](#system-architecture)
-- [Installation](#installation)
-- [Usage Guide](#usage-guide)
-- [Data Management](#data-management)
-- [Security Features](#security-features)
-- [Contributing](#contributing)
-- [License](#license)
+---
 
-## 📖 Overview
+# 📖 Overview
 
-The Online Voting System is a comprehensive solution for institutions seeking to digitize their election process. Built with Python and utilizing Excel for data persistence, it offers a perfect balance between simplicity and functionality.
+The **Online Voting System** is a desktop-based application developed using Python.
+It allows organizations or educational institutions to conduct elections digitally with security and transparency.
 
-### Core Capabilities
-- Multi-user role management (Admin/Voters)
-- Dynamic candidate management
-- Real-time vote counting
-- Comprehensive results tracking
-- Excel-based data persistence
-- Secure authentication system
+The system provides **Admin access and Voter access**, enabling secure authentication, candidate management, vote casting, and result tracking.
 
-## ✨ Key Features
+---
 
-### 👨‍💼 Admin Dashboard
-- **Candidate Management**
-  - Add candidates with photos and symbols
-  - Edit candidate information
-  - Delete candidates
-  - View candidate list
-- **Voter Management**
-  - View registered voters
-  - Delete voters
-  - Track voting status
-- **Session Control**
-  - Start voting session
-  - End voting session
-  - View session status
-- **Results Management**
-  - Live vote counting
-  - Export results to Excel
-  - View detailed results
+# ✨ Features
 
-### 👥 Voter Interface
-- **Voting Process**
-  - Secure voter registration
-  - Easy login system
-  - Cast vote with candidate photos
-  - View live results
-- **Status Tracking**
-  - Check voting status
-  - View personal voting history
-  - Access election results
+## 👨‍💼 Admin Dashboard
 
-## 🔐 Login Credentials
+* Add new candidates
+* Upload candidate photos and symbols
+* Edit candidate details
+* Delete candidates
+* View voter list
+* Start and end voting sessions
+* View live results
+* Export results to Excel
+
+## 👥 Voter Interface
+
+* Secure voter login
+* Register new voters
+* Cast vote with candidate photos
+* Prevent duplicate voting
+* View election results
+* Check voting status
+
+---
+
+# 🔐 Login Credentials
 
 ### Admin Login
-- Password: `admin123`
-- Access: Admin Dashboard
-- Features:
-  - Candidate Management
-  - Voter Management
-  - Session Control
-  - Results Management
+
+Password:
+
+admin123
+
+Access:
+
+* Candidate Management
+* Voter Management
+* Session Control
+* Result Dashboard
+
+---
 
 ### Voter Login
-- Voters Name: voter1
-- Voters ID: `1111`
-- Password: `1111`
-- Voters Name: voter2
-- Voters ID: `2222`
-- Password: `2222`
-- Voters Name: voter3 (has_voted)
-- Voters ID: `3333`
-- Password: `3333`
-- Access: Voter Interface
-- Features:
-  - Cast vote
-  - View results
-  - Check voting status
 
-## 🏗 System Architecture
+Example Voters
 
-### Database Structure
-The application utilizes a modular Excel-based storage system:
+Voter 1
+ID: 1111
+Password: 1111
 
-| File | Purpose | Key Components |
-|------|---------|----------------|
-| `candidates.xlsx` | Candidate Management | Candidate profiles, photos, symbols |
-| `voters.xlsx` | Voter Management | Voter credentials, voting status |
-| `votes.xlsx`| Vote Records | Vote data, timestamps |
-| `registration.xlsx` | Voter Registration | Voter details, registration info |
-| `session.xlsx` | Session Control | Session status, timestamps |
+Voter 2
+ID: 2222
+Password: 2222
 
-### Technical Stack
-- Backend: `Python 3.x`
-- GUI: `Tkinter`
-- Data Storage: Excel (`openpyxl`)
-- Image Processing: `Pillow` (PIL)
-- Security: `bcrypt`
+Voter 3
+ID: 3333
+Password: 3333
 
-## 🚀 Installation
+---
 
-### Prerequisites
-- `Python 3.x`
-- pip (Python package manager)
+# 🏗 System Architecture
 
-### Setup Steps
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/sabbirahmad12/online-voting-system.git
-    cd online-voting-system
-    ```
+## Database Files
 
-2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+The system stores data using Excel files.
 
-3. Run the application:
-    ```bash
-    python main.py
-    ```
+| File              | Purpose                    |
+| ----------------- | -------------------------- |
+| candidates.xlsx   | Candidate information      |
+| voters.xlsx       | Voter credentials          |
+| votes.xlsx        | Vote records               |
+| registration.xlsx | Voter registration details |
+| session.xlsx      | Voting session status      |
 
-## 📊 Data Management
+---
 
-### Database Schema
+# 🧰 Technologies Used
 
-#### Candidates Table
-| Field | Type | Description |
-|-------|------|-------------|
-| id | Integer | Unique identifier |
-| name | String | Candidate name |
-| post | String | Position |
-| photo_path | String | Photo location |
-| symbol_path | String | Symbol location |
-| votes | Integer | Vote count |
+* Python 3
+* Tkinter (GUI)
+* Pandas
+* OpenPyXL
+* Pillow
+* Bcrypt
 
-#### Voters Table
-| Field | Type | Description |
-|-------|------|-------------|
-| voter_id | String | Unique identifier |
-| password_hash | String | Encrypted password |
-| has_voted | Boolean | Voting status |
+---
 
-## 🔒 Security Features
+# 🚀 Installation
 
-### Current Implementation
-- Password hashing using bcrypt
-- Secure session management
-- One-time voting system
-- Admin authentication
-- Voter authentication
-- Excel file data storage
+### 1 Clone Repository
 
-### Recommended Enhancements
-- Implement database encryption
-- Add two-factor authentication
-- Enable secure data backup
-- Regular security audits
-- Backup and recovery procedures
+```bash
+git clone https://github.com/sunny1622/online-voting-system.git
+cd online-voting-system
+```
 
-## 🤝 Contributing
+### 2 Install Dependencies
 
-We welcome contributions to enhance the Online Voting System. Please follow these steps:
+```bash
+pip install -r requirements.txt
+```
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+### 3 Run Application
 
-### Development Guidelines
-- Follow PEP 8 style guide
-- Write comprehensive tests
-- Update documentation
-- Maintain backward compatibility
+```bash
+python main.py
+```
 
-## 📄 License
+---
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+# 📸 Application Screenshots
+
+## Home Page
+
+![Home Page](screenshots/home_page.png)
+
+## Admin Panel
+
+![Admin Panel](screenshots/admin_panel.png)
+
+## Voting Page
+
+![Voting Page](screenshots/voter_page.png)
+
+---
+
+# 📂 Project Structure
+
+```
+online-voting-system
+│
+├── main.py
+├── admin_panel.py
+├── voter_interface.py
+├── database.py
+├── requirements.txt
+│
+├── data
+│   ├── candidates.xlsx
+│   ├── voters.xlsx
+│   ├── votes.xlsx
+│
+├── screenshots
+│   ├── home_page.png
+│   ├── admin_panel.png
+│   ├── voter_page.png
+```
+
+---
+
+# 🔒 Security Features
+
+* Password hashing using bcrypt
+* Secure authentication system
+* One-person-one-vote mechanism
+* Admin access control
+* Data stored securely in Excel files
+
+---
+
+# 👨‍💻 Author
+
+**Sunny Balikanavar**
+
+GitHub
+https://github.com/sunny1622
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
 
 ---
 
 <div align="center">
-Made with ❤️ for education
+
+Made with ❤️ using Python
+
 </div>
